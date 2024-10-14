@@ -18,22 +18,22 @@
         </p>
         <router-link
           to="results"
-          class="flex justify-between items-center p-[5px] w-full"
+          class="flex justify-between p-[5px] w-full"
         >
           <span class="flex justify-between flex-1 p-[5px]">
             <span class="flex items-center">
               <img v-if="item.teamFirstImg" :src="item.teamFirstImg" alt="" />
-              <span class="ml-[10px]">{{ item.teamFirstName }}</span>
+              <span class="ml-[10px] text-xs">{{ item.teamFirstName }}</span>
             </span>
-            <span>{{ item.scoreFirst }}</span>
+            <span class="text-xs">{{ item.scoreFirst }}</span>
           </span>
           <span>:</span>
           <span class="flex justify-between flex-1 p-[5px] flex-row-reverse">
             <span class="flex items-center">
-              <span class="mr-[10px]">{{ item.teamSecondName }}</span>
+              <span class="mr-[10px] text-xs text-right">{{ item.teamSecondName }}</span>
               <img v-if="item.teamSecondImg" :src="item.teamSecondImg" />
             </span>
-            <span>{{ item.scoreSecond }}</span>
+            <span class="text-xs">{{ item.scoreSecond.replace(/\s.*/,"") }}</span>
           </span>
         </router-link>
       </div>

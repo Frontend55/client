@@ -22,44 +22,44 @@
           class="border-b-[1px] border-solid border-gray-300 last-of-type:border-none text-sm"
           @click="openModal(item)"
         >
-          <td class="text-center border-r-[1px] border-solid border-gray-300">
+          <td class="text-center text-xs border-r-[1px] border-solid border-gray-300">
             {{ index + 1 }}
           </td>
           <td class="p-[10px] border-r-[1px] border-solid border-gray-300">
             <NuxtLink :to="`${item.teamUrl}`" class="flex items-center">
               <img :src="item.teamImgSrc" class="max-w-[20px]" />
-              <span class="ml-[10px]">{{ item.teamName }}</span>
+              <span class="ml-[10px] text-xs">{{ item.teamName }}</span>
             </NuxtLink>
           </td>
           <td
-            class="text-center p-[10px] border-r-[1px] border-solid border-gray-300"
+            class="text-center text-xs p-[10px] border-r-[1px] border-solid border-gray-300"
           >
             {{ item.teamGeams }}
           </td>
           <td
-            class="text-center border-r-[1px] border-solid border-gray-300 hide-xs"
+            class="text-center text-xs border-r-[1px] border-solid border-gray-300 hide-xs"
           >
             {{ item.teamWinners }}
           </td>
           <td
-            class="text-center border-r-[1px] border-solid border-gray-300 hide-xs"
+            class="text-center text-xs border-r-[1px] border-solid border-gray-300 hide-xs"
           >
             {{ item.teamLooses }}
           </td>
           <td
-            class="text-center border-r-[1px] border-solid border-gray-300 hide-xs"
+            class="text-center text-xs border-r-[1px] border-solid border-gray-300 hide-xs"
           >
             {{ item.teamDraw }}
           </td>
           <td
-            class="text-center border-r-[1px] border-solid border-gray-300 hide-xs"
+            class="text-center text-xs border-r-[1px] border-solid border-gray-300 hide-xs"
           >
             {{ item.teamGoals }}
           </td>
-          <td class="text-center border-r-[1px] border-solid border-gray-300">
+          <td class="text-center text-xs border-r-[1px] border-solid border-gray-300">
             {{ item.teamDifference }}
           </td>
-          <td class="text-center border-r-[1px] border-solid border-gray-300">
+          <td class="text-center text-xs border-r-[1px] border-solid border-gray-300">
             {{ item.teamPoints }}
           </td>
         </tr>

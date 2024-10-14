@@ -25,7 +25,7 @@
           <li
             v-for="(
               { nameLeagues, url }, index
-            ) in rankedTableStore.infoLeagues"
+            ) in links"
             :key="nameLeagues"
             class="text-white w-full border-b-[1px] border-solid border-white pb-[10px] text-center mt-[10px] items-center first-of-type:mt-0"
           >
@@ -60,7 +60,7 @@ const rankedTableStore = useRankedTableStore();
 
 const emit = defineEmits(["setActiveindex"]);
 
-const itemsMenu = ref(["Таблица", "Календарь", "Статистика"]);
+const itemsMenu = ref(["Таблица", "Календарь"]);
 const isShowSubMenu = ref(false);
 const urlPage = ref("");
 const indexMenu = ref(null);
@@ -81,6 +81,19 @@ const openInformationLiague = (index) => {
   isShowSubMenu.value = !isShowSubMenu;
   emit("setActiveindex", index);
 };
+
+const links = computed(() => {
+  const list = rankedTableStore.infoLeagues.map((item) => {
+    return {
+      nameLeagues: item.nameLeagues,
+      url: item.url,
+      sortId: item.sortId,
+    };
+  });
+  return list.sort((a, b) => {
+    return a.sortId - b.sortId;
+  });
+});
 </script>
 
 <style scoped lang="scss">
