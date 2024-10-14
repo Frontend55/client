@@ -28,7 +28,7 @@
           <td class="p-[10px] border-r-[1px] border-solid border-gray-300">
             <NuxtLink :to="`${item.teamUrl}`" class="flex items-center">
               <img :src="item.teamImgSrc" class="max-w-[20px]" />
-              <span class="ml-[10px] text-xs">{{ item.teamName }}</span>
+              <span class="ml-[10px] text-xs team-name">{{ item.teamName }}</span>
             </NuxtLink>
           </td>
           <td
@@ -148,6 +148,10 @@ const openModal = (data) => {
 @media (max-width: 768px) {
   .hide-xs {
     display: none;
+  }
+
+  .team-name {
+    font-size: 10px;
   }
 }
 </style>
