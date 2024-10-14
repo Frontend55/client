@@ -2,6 +2,8 @@
   <div>
     <NuxtRouteAnnouncer />
     <NuxtWelcome />
+    <img src="~/public/gorod2.png" />
+    <img src="~/assets/gorod2.png" />
   </div>
 </template>
 
